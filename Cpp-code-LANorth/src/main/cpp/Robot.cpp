@@ -381,7 +381,8 @@ class Robot : public frc::SampleRobot, public PIDOutput
 
 			while(IsEnabled())
 			{				
-//************************************* CAMERA SWITCHING ********************************************************************		
+//************************************* CAMERA SWITCHING ********************************************************************	
+			// Not enough time to implement correctly not worth it
 				/* if (rightstick->GetRawButton(5) && !prevTrigger	)	
 				{
    			printf("Setting camera 2\n");
@@ -700,6 +701,7 @@ class Robot : public frc::SampleRobot, public PIDOutput
 				_loops = 0;
 							
 //*********************************************Elevator Mode Toggle*****************************************************
+				//will change from ball hieght to hatch Height
 				if (m_cogamepad->GetRawButton(Back_button))
 				{
 						mode_state = true;  //ball mode
@@ -710,6 +712,7 @@ class Robot : public frc::SampleRobot, public PIDOutput
 				}
 
 //******************************************Toggle heights*******************************************************
+				// changing to preset height of robot to make it easier
 				if (m_cogamepad->GetRawButton(X_button) && collect == false)
 				{
 					XButton_toggle = true;
